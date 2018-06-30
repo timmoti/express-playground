@@ -7,11 +7,15 @@ app.get("/", function(req, res) {
 });
 
 app.post("/", function(req, res) {
-  res.send("Got a POST request");
+  res.send(`Hello, i got a ${req.method} request`);
 });
 
 app.put("/", function(req, res) {
-  res.send("Got a PUT request");
+  res.send(`Hello, i got a ${req.method} request`);
+});
+
+app.delete("/", function(req, res) {
+  res.send(`Hello, i got a ${req.method} request`);
 });
 
 const server = app.listen(PORT, function() {

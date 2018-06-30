@@ -18,7 +18,7 @@ app.get("/books", function(req, res) {
 
 app.get("/books/:id", function(req, res) {
   const bookId = req.params.id;
-  const requestedBook = books.filter(book => book.id === bookId);
+  const requestedBook = books.find(book => book.id === bookId);
   res.status(200);
   res.send(requestedBook);
 });

@@ -2,12 +2,12 @@ const express = require("express");
 const app = express();
 
 app.use(function(req, res, next) {
-  console.log("%s %s", req.method, req.url);
+  console.log("common middleware function was called!");
   next();
 });
 
 app.use("/users", function(req, res, next) {
-  console.log("Someone is requesting a list of users");
+  console.log("middleware function for /users was called!");
   next();
 });
 
