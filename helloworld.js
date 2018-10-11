@@ -2,22 +2,22 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 
-app.get("/", function(req, res) {
+app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.post("/", function(req, res) {
+app.post("/", (req, res) => {
   res.send(`Hello, i got a ${req.method} request`);
 });
 
-app.put("/", function(req, res) {
+app.put("/", (req, res) => {
   res.send(`Hello, i got a ${req.method} request`);
 });
 
-app.delete("/", function(req, res) {
+app.delete("/", (req, res) => {
   res.send(`Hello, i got a ${req.method} request`);
 });
 
-const server = app.listen(PORT, function() {
+const server = app.listen(PORT, () => {
   console.log(`You're listening to the smooth sounds of port ${PORT}...`);
 });
