@@ -16,8 +16,10 @@ app.use("/", function(err, req, res, next) {
     console.log("I don't know how to handle network error. Pass it on.");
     next(err);
   }
-  console.log("Unknown error. Pass it on.");
-  next(err);
+  else {
+    console.log("Unknown error. Pass it on.");
+    next(err);
+  }
 });
 
 app.use(function(err, req, res, next) {
